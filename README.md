@@ -1,6 +1,6 @@
 # EncurtadorDeUrl
 
-An simple URLs shortener
+A simple URLs shortener
 
 ## Usage
 
