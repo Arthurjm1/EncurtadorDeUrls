@@ -1,42 +1,24 @@
-# Slim Framework 4 Skeleton Application
+# EncurtadorDeUrl
 
-[![Coverage Status](https://coveralls.io/repos/github/slimphp/Slim-Skeleton/badge.svg?branch=master)](https://coveralls.io/github/slimphp/Slim-Skeleton?branch=master)
+An simple URLs shortener
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 4 application. This application uses the latest Slim 4 with Slim PSR-7 implementation and PHP-DI container implementation. It also uses the Monolog logger.
+## Usage
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+First of all, set your database parameters in "app/settings.php".
 
-## Install the Application
-
-Run this command from the directory in which you want to install your new Slim Framework application.
-
-```bash
-composer create-project slim/slim-skeleton [my-app-name]
+Then, just be sure you're the "public" directory an run in your terminal:
+```
+php -S localhost:8080
 ```
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+Now you're ready to use it!
 
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writable.
+## Requests
 
-To run the application in development, you can run these commands 
+### Shorten your URL
 
-```bash
-cd [my-app-name]
-composer start
 ```
-
-Or you can use `docker-compose` to run the app with `docker`, so you can run these commands:
-```bash
-cd [my-app-name]
-docker-compose up -d
+Post
+localhost:8080/
+data: { "url" : "youtURL.com" }
 ```
-After that, open `http://localhost:8080` in your browser.
-
-Run this command in the application directory to run the test suite
-
-```bash
-composer test
-```
-
-That's it! Now go build something cool.
